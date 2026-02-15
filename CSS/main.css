@@ -1,141 +1,31 @@
-/* =========================
-   VARIABLES
-========================= */
-
 :root {
-    --bg-dark: #0f172a;
-    --bg-light: #1e293b;
-    --accent: #3b82f6;
-    --text: #f1f5f9;
-    --muted: #94a3b8;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --text-light: #f1f5f9;
+  --text-muted: #94a3b8;
+  --radius: 16px;
 }
 
-/* =========================
-   RESET
-========================= */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at top left, #1e3a8a, #0f172a 60%);
-    color: var(--text);
-    min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, #1e3a8a, #0f172a 60%);
+  color: var(--text-light);
+  min-height: 100vh;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background: rgba(30, 41, 59, 0.6);
-    backdrop-filter: blur(8px);
+a {
+  text-decoration: none;
+  color: var(--text-light);
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--accent);
-}
-
-.nav a {
-    color: var(--muted);
-    text-decoration: none;
-    margin: 0 0.5rem;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: var(--accent);
-}
-
-.profile {
-    font-size: 1.2rem;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    text-align: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(135deg, #2563eb, #1e3a8a);
-    border-radius: 0 0 30px 30px;
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
-}
-
-.hero h1 {
-    font-size: 2rem;
-}
-
-.hero p {
-    color: var(--muted);
-    margin: 0.5rem 0 1.5rem;
-}
-
-.btn-primary {
-    background: var(--accent);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background: #2563eb;
-}
-
-/* =========================
-   ALBUM GRID
-========================= */
-
-.albums {
-    padding: 2rem 1rem;
-}
-
-.albums h2 {
-    margin-bottom: 1rem;
-}
-
-.album-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.card {
-    background: var(--bg-light);
-    height: 150px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
-}
-
-/* =========================
-   DESKTOP
-========================= */
-
-@media (min-width: 768px) {
-    .album-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
+h1, h2, h3 {
+  font-weight: 600;
 }
