@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Player | MusicStream</title>
+  <title>Music Player | MusicStream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../CSS/main.css">
-  <link rel="stylesheet" href="../CSS/layout.css">
-  <link rel="stylesheet" href="../CSS/components.css">
   <link rel="stylesheet" href="../CSS/player.css">
 </head>
 
@@ -18,41 +15,30 @@
   <h1>🎵 MusicStream</h1>
   <nav>
     <a href="../index.html">Discover</a>
-    <a href="success.html">Library</a>
     <a href="cart.html">Store</a>
   </nav>
 </header>
 
 <main class="player-container">
 
-  <h2>Song Previews (1:15)</h2>
+  <h2>Now Playing</h2>
 
-  <!-- SONG 1 -->
-  <div class="track-card">
+  <!-- VINYL -->
+  <div class="vinyl-container">
+    <div class="vinyl">
+      <div class="album-cover">
+        <img src="../Imagenes/cover1.jpg" alt="Album Cover">
+      </div>
+    </div>
+  </div>
+
+  <!-- SONG INFO -->
+  <div class="track-info">
     <h3>Starlight</h3>
     <p>Stellar Waves</p>
+
     <audio controls>
       <source src="../Sonido/starlight-preview.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
-  </div>
-
-  <!-- SONG 2 -->
-  <div class="track-card">
-    <h3>Cosmic Drift</h3>
-    <p>Galaxy Sound</p>
-    <audio controls>
-      <source src="../Sonido/cosmic-preview.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
-  </div>
-
-  <!-- SONG 3 -->
-  <div class="track-card">
-    <h3>Orbit Lights</h3>
-    <p>Lunar Drift</p>
-    <audio controls>
-      <source src="../Sonido/orbit-preview.mp3" type="audio/mpeg">
       Your browser does not support audio.
     </audio>
   </div>
