@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicStream</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">🎵 MusicStream</div>
+        <nav class="nav">
+            <a href="#">Discover</a>
+            <a href="#">Library</a>
+            <a href="#">Store</a>
+        </nav>
+        <div class="profile">👤</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Solar Flare</h1>
+            <p>Editor's Pick</p>
+            <a href="#" class="btn-primary">Buy Now</a>
+        </section>
+
+        <section class="albums">
+            <h2>New Albums This Week</h2>
+            <div class="album-grid">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
