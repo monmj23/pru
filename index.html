@@ -3,40 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MusicStream</title>
+<title>MusicStream | Discover</title>
+
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/store.css">
+
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-  <h2>🎵 MusicStream</h2>
-  <nav>
-    <a href="index.html">Discover</a>
-    <a href="success.html">Library</a>
-    <a href="cart.html">Store</a>
-  </nav>
+    <div class="logo">
+        <h2>🎵 MusicStream</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Discover</a>
+        <a href="success.html">Library</a>
+        <a href="cart.html">Store</a>
+    </nav>
+
+    <div class="avatar">
+        👤
+    </div>
 </header>
+
+<!-- ================= MAIN ================= -->
 
 <main>
 
-<section class="card">
-  <h1>Solar Flare</h1>
-  <p>Editor's Pick</p>
-  <a href="album-detail.html" class="btn-primary">Buy Now</a>
-</section>
+    <!-- SEARCH BAR -->
+    <section class="search-bar">
+        <input type="text" placeholder="Artists, albums, tracks">
+    </section>
 
-<h2 style="margin-top:2rem;">New Albums This Week</h2>
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <div>
+            <h1>Solar Flare</h1>
+            <p>Editor's Pick • Electronic • 2024</p>
+            <a href="album-detail.html" class="btn-primary">Buy Now</a>
+        </div>
+    </section>
 
-<section class="album-grid">
-  <a href="album-detail.html" class="card">Album 1</a>
-  <a href="album-detail.html" class="card">Album 2</a>
-  <a href="album-detail.html" class="card">Album 3</a>
-  <a href="album-detail.html" class="card">Album 4</a>
-</section>
+    <!-- NEW ALBUMS -->
+    <section>
+        <h2 class="section-title">New Albums This Week</h2>
+
+        <div class="album-grid">
+
+            <a href="album-detail.html" class="album-card">
+                <div class="album-cover"></div>
+                <h3>Cosmic Echoes</h3>
+                <p>Stellar Waves</p>
+            </a>
+
+            <a href="album-detail.html" class="album-card">
+                <div class="album-cover"></div>
+                <h3>Midnight Orbit</h3>
+                <p>Lunar Drift</p>
+            </a>
+
+            <a href="album-detail.html" class="album-card">
+                <div class="album-cover"></div>
+                <h3>Neon Pulse</h3>
+                <p>Electric Nova</p>
+            </a>
+
+            <a href="album-detail.html" class="album-card">
+                <div class="album-cover"></div>
+                <h3>Stellar Dreams</h3>
+                <p>Galaxy Sound</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- TOP SELLING TRACKS -->
+    <section>
+        <h2 class="section-title">Top Selling Tracks</h2>
+
+        <div class="track-grid">
+
+            <a href="player.html" class="track-card">
+                <div class="track-art"></div>
+                <div>
+                    <h4>Starlight</h4>
+                    <p>Stellar Waves</p>
+                </div>
+            </a>
+
+            <a href="player.html" class="track-card">
+                <div class="track-art"></div>
+                <div>
+                    <h4>Cosmic Drift</h4>
+                    <p>Galaxy Sound</p>
+                </div>
+            </a>
+
+            <a href="player.html" class="track-card">
+                <div class="track-art"></div>
+                <div>
+                    <h4>Nova Pulse</h4>
+                    <p>Electric Nova</p>
+                </div>
+            </a>
+
+            <a href="player.html" class="track-card">
+                <div class="track-art"></div>
+                <div>
+                    <h4>Orbit Lights</h4>
+                    <p>Lunar Drift</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
 
 </main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer style="text-align:center; padding:2rem; color:var(--text-muted);">
+    © 2026 MusicStream - Acme Records
+</footer>
+
 </body>
 </html>
-
