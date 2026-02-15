@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Player | MusicStream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="../CSS/main.css">
   <link rel="stylesheet" href="../CSS/layout.css">
   <link rel="stylesheet" href="../CSS/components.css">
@@ -13,79 +14,54 @@
 
 <body>
 
-<header>
-    <h2>🎵 MusicStream</h2>
-    <nav>
-        <a href="index.html">Discover</a>
-        <a href="success.html">Library</a>
-        <a href="cart.html">Store</a>
-    </nav>
+<header class="navbar">
+  <h1>🎵 MusicStream</h1>
+  <nav>
+    <a href="../index.html">Discover</a>
+    <a href="success.html">Library</a>
+    <a href="cart.html">Store</a>
+  </nav>
 </header>
 
-<main class="player-layout">
+<main class="player-container">
 
-    <!-- PLAYER CENTRAL -->
-    <section class="player-main">
+  <h2>Song Previews (1:15)</h2>
 
-        <div class="album-art"></div>
+  <!-- SONG 1 -->
+  <div class="track-card">
+    <h3>Starlight</h3>
+    <p>Stellar Waves</p>
+    <audio controls>
+      <source src="../Sonido/starlight-preview.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+  </div>
 
-        <h2 class="track-title">Starlight</h2>
-        <p class="artist-name">Stellar Waves</p>
+  <!-- SONG 2 -->
+  <div class="track-card">
+    <h3>Cosmic Drift</h3>
+    <p>Galaxy Sound</p>
+    <audio controls>
+      <source src="../Sonido/cosmic-preview.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+  </div>
 
-        <!-- PROGRESS BAR -->
-        <div class="progress-container">
-            <span>1:15</span>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-            <span>3:45</span>
-        </div>
-
-        <!-- CONTROLES -->
-        <div class="controls">
-            <button>🔀</button>
-            <button>⏮</button>
-            <button class="play">▶</button>
-            <button>⏭</button>
-            <button>🔁</button>
-        </div>
-
-        <!-- VOLUMEN -->
-        <div class="volume">
-            🔊
-            <div class="volume-bar">
-                <div class="volume-level"></div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- UP NEXT -->
-    <aside class="up-next card">
-        <h3>Up Next</h3>
-
-        <div class="next-track active">
-            <p>Starlight</p>
-            <span>3:45</span>
-        </div>
-
-        <div class="next-track">
-            <p>Cosmic Drift</p>
-            <span>4:10</span>
-        </div>
-
-        <div class="next-track">
-            <p>Galaxy Run</p>
-            <span>5:00</span>
-        </div>
-
-        <div class="next-track">
-            <p>Nova Pulse</p>
-            <span>3:58</span>
-        </div>
-    </aside>
+  <!-- SONG 3 -->
+  <div class="track-card">
+    <h3>Orbit Lights</h3>
+    <p>Lunar Drift</p>
+    <audio controls>
+      <source src="../Sonido/orbit-preview.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+  </div>
 
 </main>
+
+<footer class="footer">
+  <p>© 2026 MusicStream - Acme Records</p>
+</footer>
 
 </body>
 </html>
