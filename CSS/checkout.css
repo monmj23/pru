@@ -1,126 +1,101 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout | MusicStream</title>
+.checkout-layout {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
 
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/checkout.css">
+@media (min-width: 1024px) {
+    .checkout-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
 
-</head>
-<body>
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
-<header>
-    <h2>🎵 MusicStream</h2>
-    <nav>
-        <a href="cart.html">← Back to Cart</a>
-    </nav>
-</header>
+/* FORM */
 
-<main class="checkout-layout">
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
 
-    <!-- FORMULARIO -->
-    <section class="checkout-form">
+label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+}
 
-        <!-- MÉTODO DE PAGO -->
-        <article class="card">
-            <h3>Payment Method</h3>
+input {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    background: var(--bg-primary);
+    color: var(--text-light);
+}
 
-            <div class="payment-options">
-                <div class="payment-card active">
-                    💳 Credit Card
-                </div>
-                <div class="payment-card">
-                    🏦 Debit Card
-                </div>
-                <div class="payment-card">
-                    💲 PayPal
-                </div>
-            </div>
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
 
-            <div class="form-group">
-                <label>Card Number</label>
-                <input type="text" placeholder="1234 5678 9012 3456">
-            </div>
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Expiration</label>
-                    <input type="text" placeholder="MM/YY">
-                </div>
+/* PAYMENT OPTIONS */
 
-                <div class="form-group">
-                    <label>CVC</label>
-                    <input type="text" placeholder="123">
-                </div>
-            </div>
-        </article>
+.payment-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
 
-        <!-- DIRECCIÓN -->
-        <article class="card">
-            <h3>Billing Address</h3>
+.payment-card {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    background: var(--bg-primary);
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="John Doe">
-            </div>
+.payment-card:hover {
+    border-color: var(--accent);
+}
 
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" placeholder="email@example.com">
-            </div>
+.payment-card.active {
+    border: 2px solid var(--accent);
+}
 
-            <div class="form-group">
-                <label>Address</label>
-                <input type="text" placeholder="Street address">
-            </div>
+/* SUMMARY */
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>City</label>
-                    <input type="text">
-                </div>
+.checkout-summary {
+    height: fit-content;
+}
 
-                <div class="form-group">
-                    <label>Zip Code</label>
-                    <input type="text">
-                </div>
-            </div>
+.summary-item,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 0;
+}
 
-        </article>
+.summary-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
-    </section>
-
-    <!-- RESUMEN -->
-    <aside class="checkout-summary card">
-        <h3>Order Summary</h3>
-
-        <div class="summary-item">
-            <span>Cosmic Echoes</span>
-            <span>$12.99</span>
-        </div>
-
-        <div class="summary-item">
-            <span>Tax</span>
-            <span>$1.00</span>
-        </div>
-
-        <hr>
-
-        <div class="summary-total">
-            <span>Total</span>
-            <span>$13.99</span>
-        </div>
-
-        <a href="success.html" class="btn-primary full-width">
-            Place Order
-        </a>
-    </aside>
-
-</main>
-
-</body>
-</html>
+.full-width {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
