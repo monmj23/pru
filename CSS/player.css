@@ -1,147 +1,27 @@
-/* LAYOUT */
-
-.player-layout {
-    display: grid;
-    gap: 2rem;
-    padding: 2rem;
+.player-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
 }
 
-@media (min-width: 1024px) {
-    .player-layout {
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-    }
+.track-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* PLAYER CENTRAL */
-
-.player-main {
-    text-align: center;
+.track-card h3 {
+  margin-bottom: 5px;
 }
 
-/* ALBUM ART */
-
-.album-art {
-    width: 250px;
-    height: 250px;
-    margin: auto;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #2563eb, #1e3a8a);
-    box-shadow: 0 0 40px rgba(59,130,246,0.7);
-    transition: 0.4s;
+.track-card p {
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
 
-.album-art:hover {
-    transform: scale(1.05);
-}
-
-/* TITLES */
-
-.track-title {
-    margin-top: 1.5rem;
-    font-size: 1.8rem;
-}
-
-.artist-name {
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-}
-
-/* PROGRESS BAR */
-
-.progress-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.progress-bar {
-    flex: 1;
-    height: 6px;
-    background: #334155;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress {
-    width: 40%;
-    height: 100%;
-    background: var(--accent);
-}
-
-/* CONTROLS */
-
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.controls button {
-    background: var(--bg-secondary);
-    border: none;
-    padding: 0.8rem;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.controls button:hover {
-    background: var(--accent);
-}
-
-.controls .play {
-    font-size: 1.5rem;
-    padding: 1rem;
-    background: var(--accent);
-}
-
-/* VOLUME */
-
-.volume {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.volume-bar {
-    width: 150px;
-    height: 6px;
-    background: #334155;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.volume-level {
-    width: 70%;
-    height: 100%;
-    background: var(--accent);
-}
-
-/* UP NEXT */
-
-.up-next {
-    padding: 1.5rem;
-}
-
-.next-track {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.8rem;
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
-    transition: 0.3s;
-}
-
-.next-track:hover {
-    background: rgba(59,130,246,0.2);
-}
-
-.next-track.active {
-    background: rgba(59,130,246,0.3);
+audio {
+  width: 100%;
 }
