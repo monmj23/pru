@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Perfil | MusicStream</title>
+
 <link rel="stylesheet" href="CSS/estilos.css">
 <link rel="stylesheet" href="CSS/perfil.css">
+
 </head>
 
 <body>
@@ -23,24 +25,30 @@
 
     <h1>Mi Perfil</h1>
 
-    <!-- Avatar actual -->
+    <!-- Avatar principal -->
     <div class="avatar-actual">
-        <img id="avatarPrincipal" src="Imagenes/default-avatar.png">
+        <img id="avatarPrincipal" src="Imagenes/default-avatar.png" alt="Avatar">
     </div>
 
     <h3>Selecciona un avatar</h3>
 
-    <!-- 9 Opciones -->
+    <!-- CUADRICULA 5x2 -->
     <div class="grid-avatares">
+
         <img src="Imagenes/avatar1.png" onclick="cambiarAvatar(this.src)">
         <img src="Imagenes/avatar2.png" onclick="cambiarAvatar(this.src)">
         <img src="Imagenes/avatar3.png" onclick="cambiarAvatar(this.src)">
         <img src="Imagenes/avatar4.png" onclick="cambiarAvatar(this.src)">
         <img src="Imagenes/avatar5.png" onclick="cambiarAvatar(this.src)">
+
         <img src="Imagenes/avatar6.png" onclick="cambiarAvatar(this.src)">
         <img src="Imagenes/avatar7.png" onclick="cambiarAvatar(this.src)">
         <img src="Imagenes/avatar8.png" onclick="cambiarAvatar(this.src)">
         <img src="Imagenes/avatar9.png" onclick="cambiarAvatar(this.src)">
+        
+        <!-- Espacio extra (puedes poner avatar10 si quieres) -->
+        <div class="espacio-vacio"></div>
+
     </div>
 
     <h3>O subir tu propia imagen</h3>
@@ -51,7 +59,6 @@
 
 <script>
 
-// Cargar avatar guardado
 window.onload = function() {
     const avatarGuardado = localStorage.getItem("avatar");
     if (avatarGuardado) {
@@ -59,13 +66,11 @@ window.onload = function() {
     }
 };
 
-// Cambiar avatar predefinido
 function cambiarAvatar(src) {
     document.getElementById("avatarPrincipal").src = src;
     localStorage.setItem("avatar", src);
 }
 
-// Subir imagen propia
 document.getElementById("subirImagen").addEventListener("change", function() {
     const archivo = this.files[0];
     if (archivo) {
