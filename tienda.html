@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tienda</title>
+<link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2>🎵 MusicStream</h2>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="perfil.html">Perfil</a>
+    </nav>
+</header>
+
+<section class="contenido">
+    <h1>Tienda</h1>
+
+    <div class="tarjeta">
+        <h3>Solar Flare</h3>
+        <p>Q 50.00</p>
+        <button class="boton" onclick="agregarCarrito('Solar Flare')">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="tarjeta">
+        <h3>Milo J - Tus Vueltas</h3>
+        <p>Q 40.00</p>
+        <button class="boton" onclick="agregarCarrito('Milo J - Tus Vueltas')">
+            Agregar al carrito
+        </button>
+    </div>
+
+</section>
+
+<script>
+function agregarCarrito(producto) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push(producto);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    alert("Producto agregado al carrito");
+}
+</script>
+
+</body>
+</html>
 
