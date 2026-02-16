@@ -5,42 +5,41 @@
 <title>Carrito</title>
 <link rel="stylesheet" href="CSS/estilos.css">
 </head>
-
 <body>
 
 <header class="navbar">
-    <h2>🎵 MusicStream</h2>
-
-    <nav class="menu-derecha">
-        <a href="index.html">Inicio</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="carrito.html">Carrito</a>
-        <a href="perfil.html">Perfil</a>
-
-        <!-- BURBUJA AVATAR -->
-        <img id="avatarMenu" class="avatar-menu" 
-             src="Imagenes/default-avatar.png"
-             onclick="window.location.href='perfil.html'">
-    </nav>
+<h2>🎵 MusicStream</h2>
+<nav class="menu-derecha">
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito</a>
+<a href="perfil.html">Perfil</a>
+<img id="avatarMenu" class="avatar-menu" src="Imagenes/default-avatar.png" onclick="window.location.href='perfil.html'">
+</nav>
 </header>
 
-
 <section class="contenido">
-    <h1>Tu Carrito</h1>
-    <ul id="listaCarrito"></ul>
+<h1>Tu Carrito</h1>
+<ul id="listaCarrito"></ul>
 </section>
 
 <script>
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let lista = document.getElementById("listaCarrito");
+carrito.forEach(producto=>{
+let li=document.createElement("li");
+li.textContent=producto;
+lista.appendChild(li);
+});
 
-carrito.forEach(producto => {
-    let li = document.createElement("li");
-    li.textContent = producto;
-    lista.appendChild(li);
+document.addEventListener("DOMContentLoaded", function() {
+const avatarGuardado = localStorage.getItem("avatar");
+const avatarMenu = document.getElementById("avatarMenu");
+if (avatarGuardado && avatarMenu) {
+avatarMenu.src = avatarGuardado;
+}
 });
 </script>
 
 </body>
 </html>
-
