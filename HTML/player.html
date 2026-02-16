@@ -1,53 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Music Player | MusicStream</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../CSS/player.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproductor | MusicStream</title>
+<link rel="stylesheet" href="../css/player.css">
 </head>
 
 <body>
 
-<header class="navbar">
-  <h1>🎵 MusicStream</h1>
-  <nav>
-    <a href="../index.html">Discover</a>
-    <a href="cart.html">Store</a>
-  </nav>
+<header>
+    <h1>🎵 Reproduciendo ahora</h1>
+    <a href="../index.html">← Volver</a>
 </header>
 
-<main class="player-container">
+<main class="reproductor">
 
-  <h2>Now Playing</h2>
-
-  <!-- VINILO -->
-  <div class="vinyl-container">
-    <div class="vinyl">
-      <div class="album-cover">
-        <img src="../Imagenes/cover1.jpg" alt="Album Cover">
-      </div>
+    <div class="vinilo">
+        <div class="portada">
+            <img src="../imagenes/milo.jpg">
+        </div>
     </div>
-  </div>
 
-  <!-- INFO CANCIÓN -->
-  <div class="track-info">
-    <h3>Milo J - Tus Vueltas</h3>
-    <p>Preview</p>
+    <h2>Milo J - Tus Vueltas</h2>
 
-  <audio controls>
-    <source src="../Sonidos/MILO%20J%20-%20TUS%20VUELTAS%20(audio).mp3" type="audio/mpeg">
-  </audio>
-
-  </div>
+    <audio controls>
+        <source src="../sonidos/milo-j-tus-vueltas.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
 
 </main>
-
-<footer class="footer">
-  <p>© 2026 MusicStream - Acme Records</p>
-</footer>
 
 </body>
 </html>
