@@ -14,32 +14,24 @@
 <a href="tienda.html">Tienda</a>
 <a href="carrito.html">Carrito</a>
 <a href="perfil.html">Perfil</a>
-<img id="avatarMenu" class="avatar-menu" src="Imagenes/default-avatar.png" onclick="window.location.href='perfil.html'">
+
+<a href="perfil.html">
+<img class="avatar-menu" src="Imagenes/default-avatar.png" alt="Avatar">
+</a>
+
 </nav>
 </header>
 
 <section class="contenido">
 <h1>Tu Carrito</h1>
-<ul id="listaCarrito"></ul>
+
+<ul>
+<li>Producto 1</li>
+<li>Producto 2</li>
+<li>Producto 3</li>
+</ul>
+
 </section>
-
-<script>
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let lista = document.getElementById("listaCarrito");
-carrito.forEach(producto=>{
-let li=document.createElement("li");
-li.textContent=producto;
-lista.appendChild(li);
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-const avatarGuardado = localStorage.getItem("avatar");
-const avatarMenu = document.getElementById("avatarMenu");
-if (avatarGuardado && avatarMenu) {
-avatarMenu.src = avatarGuardado;
-}
-});
-</script>
 
 </body>
 </html>
