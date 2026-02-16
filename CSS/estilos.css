@@ -6,75 +6,41 @@ color: white;
 text-align: center;
 }
 
-.navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 15px 40px;
+header {
+padding: 20px;
 background-color: #0b132b;
-position: relative;
 }
 
-.menu-derecha {
-display: flex;
-gap: 30px;
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
+h1 {
+margin: 0;
+color: #9b59b6;
 }
 
-.menu-derecha a {
-text-decoration: none;
-color: white;
-font-weight: bold;
-padding: 8px 15px;
-border-radius: 8px;
-transition: 0.3s;
-}
-
-.menu-derecha a:hover {
-border: 2px solid #9b59b6;
-}
-
-.avatar-menu {
-width: 40px;
-height: 40px;
-border-radius: 50%;
-position: absolute;
-right: 40px;
-}
-
-.contenido {
+section {
 padding: 40px;
+}
+
+h2 {
+margin-bottom: 20px;
 }
 
 .grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 30px;
-margin-top: 40px;
+gap: 25px;
 }
 
 .card {
 background-color: #1e293b;
-padding: 30px;
+padding: 25px;
 border-radius: 12px;
+text-decoration: none;
+color: white;
 transition: 0.3s;
+display: block;
 }
 
 .card:hover {
 border: 2px solid #9b59b6;
 transform: scale(1.05);
-}
-
-.card a {
-text-decoration: none;
-color: white;
-display: block;
-width: 100%;
-height: 100%;
-}
-
-.seccion {
-margin-top: 80px;
 }
