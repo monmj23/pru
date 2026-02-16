@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrito</title>
+<link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2>🎵 MusicStream</h2>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="perfil.html">Perfil</a>
+    </nav>
+</header>
+
+<section class="contenido">
+    <h1>Tu Carrito</h1>
+    <ul id="listaCarrito"></ul>
+</section>
+
+<script>
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let lista = document.getElementById("listaCarrito");
+
+carrito.forEach(producto => {
+    let li = document.createElement("li");
+    li.textContent = producto;
+    lista.appendChild(li);
+});
+</script>
+
+</body>
+</html>
 
