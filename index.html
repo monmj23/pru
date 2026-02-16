@@ -2,34 +2,36 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Inicio | MusicStream</title>
+<title>Inicio</title>
 <link rel="stylesheet" href="CSS/estilos.css">
 </head>
-
 <body>
 
 <header class="navbar">
-    <h2>🎵 MusicStream</h2>
-
-    <nav class="menu-derecha">
-        <a href="index.html">Inicio</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="carrito.html">Carrito</a>
-        <a href="perfil.html">Perfil</a>
-
-        <!-- BURBUJA AVATAR -->
-        <img id="avatarMenu" class="avatar-menu" 
-             src="Imagenes/default-avatar.png"
-             onclick="window.location.href='perfil.html'">
-    </nav>
+<h2>🎵 MusicStream</h2>
+<nav class="menu-derecha">
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito</a>
+<a href="perfil.html">Perfil</a>
+<img id="avatarMenu" class="avatar-menu" src="Imagenes/default-avatar.png" onclick="window.location.href='perfil.html'">
+</nav>
 </header>
 
-
 <section class="contenido">
-    <h1>Bienvenido a MusicStream</h1>
-    <p>Explora música y compra tus álbumes favoritos.</p>
+<h1>Bienvenido a MusicStream</h1>
+<p>Explora música y compra tus álbumes favoritos.</p>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const avatarGuardado = localStorage.getItem("avatar");
+const avatarMenu = document.getElementById("avatarMenu");
+if (avatarGuardado && avatarMenu) {
+avatarMenu.src = avatarGuardado;
+}
+});
+</script>
 
 </body>
 </html>
-
