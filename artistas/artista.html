@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Artista</title>
+<link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+
+<header class="navbar">
+<h2>🎵 MusicStream</h2>
+<nav class="menu-derecha">
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito</a>
+<a href="perfil.html">Perfil</a>
+<img id="avatarMenu" class="avatar-menu" src="https://via.placeholder.com/40">
+</nav>
+</header>
+
+<section class="contenido">
+<h1 id="titulo"></h1>
+<div class="grid" id="lista"></div>
+</section>
+
+<script>
+const cancionesPorArtista = {
+"Milo J": ["Tus Vueltas"],
+"Taylor Swift": ["Blank Space"],
+"Bad Bunny": ["Tití Me Preguntó"],
+"Arctic Monkeys": []
+};
+
+const params = new URLSearchParams(window.location.search);
+const artista = params.get("nombre");
+
+document.getElementById("titulo").textContent = artista;
+
+const contenedor = document.getElementById("lista");
+
+if (cancionesPorArtista[artista]) {
+cancionesPorArtista[artista].forEach(cancion => {
+const div = document.createElement("div");
+div.className = "card";
+div.textContent = cancion;
+contenedor.appendChild(div);
+});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+const avatarGuardado = localStorage.getItem("avatar");
+const avatarMenu = document.getElementById("avatarMenu");
+if (avatarGuardado && avatarMenu) {
+avatarMenu.src = avatarGuardado;
+}
+});
+</script>
+
+</body>
+</html>
