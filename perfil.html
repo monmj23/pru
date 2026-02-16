@@ -15,7 +15,11 @@
 <a href="tienda.html">Tienda</a>
 <a href="carrito.html">Carrito</a>
 <a href="perfil.html">Perfil</a>
-<img id="avatarMenu" class="avatar-menu" src="Imagenes/default-avatar.png">
+
+<a href="perfil.html">
+<img class="avatar-menu" src="Imagenes/default-avatar.png" alt="Avatar">
+</a>
+
 </nav>
 </header>
 
@@ -23,57 +27,25 @@
 <h1>Mi Perfil</h1>
 
 <div class="avatar-actual">
-<img id="avatarPrincipal" src="Imagenes/default-avatar.png">
+<img src="Imagenes/default-avatar.png" alt="Avatar principal">
 </div>
 
 <h3>Selecciona un avatar</h3>
 
 <div class="grid-avatares">
-<img src="Imagenes/avatar1.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar2.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar3.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar4.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar5.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar6.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar7.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar8.png" onclick="cambiarAvatar(this.src)">
-<img src="Imagenes/avatar9.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar1.png" alt="Avatar 1">
+<img src="Imagenes/avatar2.png" alt="Avatar 2">
+<img src="Imagenes/avatar3.png" alt="Avatar 3">
+<img src="Imagenes/avatar4.png" alt="Avatar 4">
+<img src="Imagenes/avatar5.png" alt="Avatar 5">
+<img src="Imagenes/avatar6.png" alt="Avatar 6">
+<img src="Imagenes/avatar7.png" alt="Avatar 7">
+<img src="Imagenes/avatar8.png" alt="Avatar 8">
+<img src="Imagenes/avatar9.png" alt="Avatar 9">
 <div class="espacio-vacio"></div>
 </div>
 
-<h3>Subir imagen propia</h3>
-<input type="file" id="subirImagen" accept="image/*">
-
 </section>
-
-<script>
-window.onload=function(){
-const avatarGuardado=localStorage.getItem("avatar");
-if(avatarGuardado){
-document.getElementById("avatarPrincipal").src=avatarGuardado;
-document.getElementById("avatarMenu").src=avatarGuardado;
-}
-};
-
-function cambiarAvatar(src){
-document.getElementById("avatarPrincipal").src=src;
-document.getElementById("avatarMenu").src=src;
-localStorage.setItem("avatar",src);
-}
-
-document.getElementById("subirImagen").addEventListener("change",function(){
-const archivo=this.files[0];
-if(archivo){
-const lector=new FileReader();
-lector.onload=function(e){
-document.getElementById("avatarPrincipal").src=e.target.result;
-document.getElementById("avatarMenu").src=e.target.result;
-localStorage.setItem("avatar",e.target.result);
-};
-lector.readAsDataURL(archivo);
-}
-});
-</script>
 
 </body>
 </html>
