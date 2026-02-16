@@ -2,94 +2,77 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Perfil | MusicStream</title>
-
+<title>Perfil</title>
 <link rel="stylesheet" href="CSS/estilos.css">
 <link rel="stylesheet" href="CSS/perfil.css">
-
 </head>
-
 <body>
 
 <header class="navbar">
-    <h2>🎵 MusicStream</h2>
-
-    <nav class="menu-derecha">
-        <a href="index.html">Inicio</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="carrito.html">Carrito</a>
-        <a href="perfil.html">Perfil</a>
-
-        <!-- BURBUJA AVATAR -->
-        <img id="avatarMenu" class="avatar-menu" 
-             src="Imagenes/default-avatar.png"
-             onclick="window.location.href='perfil.html'">
-    </nav>
+<h2>🎵 MusicStream</h2>
+<nav class="menu-derecha">
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito</a>
+<a href="perfil.html">Perfil</a>
+<img id="avatarMenu" class="avatar-menu" src="Imagenes/default-avatar.png">
+</nav>
 </header>
 
-
 <section class="contenido">
+<h1>Mi Perfil</h1>
 
-    <h1>Mi Perfil</h1>
+<div class="avatar-actual">
+<img id="avatarPrincipal" src="Imagenes/default-avatar.png">
+</div>
 
-    <!-- Avatar principal -->
-    <div class="avatar-actual">
-        <img id="avatarPrincipal" src="Imagenes/default-avatar.png" alt="Avatar">
-    </div>
+<h3>Selecciona un avatar</h3>
 
-    <h3>Selecciona un avatar</h3>
+<div class="grid-avatares">
+<img src="Imagenes/avatar1.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar2.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar3.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar4.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar5.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar6.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar7.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar8.png" onclick="cambiarAvatar(this.src)">
+<img src="Imagenes/avatar9.png" onclick="cambiarAvatar(this.src)">
+<div class="espacio-vacio"></div>
+</div>
 
-    <!-- CUADRICULA 5x2 -->
-    <div class="grid-avatares">
-
-        <img src="Imagenes/avatar1.png" onclick="cambiarAvatar(this.src)">
-        <img src="Imagenes/avatar2.png" onclick="cambiarAvatar(this.src)">
-        <img src="Imagenes/avatar3.png" onclick="cambiarAvatar(this.src)">
-        <img src="Imagenes/avatar4.png" onclick="cambiarAvatar(this.src)">
-        <img src="Imagenes/avatar5.png" onclick="cambiarAvatar(this.src)">
-
-        <img src="Imagenes/avatar6.png" onclick="cambiarAvatar(this.src)">
-        <img src="Imagenes/avatar7.png" onclick="cambiarAvatar(this.src)">
-        <img src="Imagenes/avatar8.png" onclick="cambiarAvatar(this.src)">
-        <img src="Imagenes/avatar9.png" onclick="cambiarAvatar(this.src)">
-        
-        <!-- Espacio extra (puedes poner avatar10 si quieres) -->
-        <div class="espacio-vacio"></div>
-
-    </div>
-
-    <h3>O subir tu propia imagen</h3>
-
-    <input type="file" id="subirImagen" accept="image/*">
+<h3>Subir imagen propia</h3>
+<input type="file" id="subirImagen" accept="image/*">
 
 </section>
 
 <script>
-
-window.onload = function() {
-    const avatarGuardado = localStorage.getItem("avatar");
-    if (avatarGuardado) {
-        document.getElementById("avatarPrincipal").src = avatarGuardado;
-    }
+window.onload=function(){
+const avatarGuardado=localStorage.getItem("avatar");
+if(avatarGuardado){
+document.getElementById("avatarPrincipal").src=avatarGuardado;
+document.getElementById("avatarMenu").src=avatarGuardado;
+}
 };
 
-function cambiarAvatar(src) {
-    document.getElementById("avatarPrincipal").src = src;
-    localStorage.setItem("avatar", src);
+function cambiarAvatar(src){
+document.getElementById("avatarPrincipal").src=src;
+document.getElementById("avatarMenu").src=src;
+localStorage.setItem("avatar",src);
 }
 
-document.getElementById("subirImagen").addEventListener("change", function() {
-    const archivo = this.files[0];
-    if (archivo) {
-        const lector = new FileReader();
-        lector.onload = function(e) {
-            document.getElementById("avatarPrincipal").src = e.target.result;
-            localStorage.setItem("avatar", e.target.result);
-        };
-        lector.readAsDataURL(archivo);
-    }
+document.getElementById("subirImagen").addEventListener("change",function(){
+const archivo=this.files[0];
+if(archivo){
+const lector=new FileReader();
+lector.onload=function(e){
+document.getElementById("avatarPrincipal").src=e.target.result;
+document.getElementById("avatarMenu").src=e.target.result;
+localStorage.setItem("avatar",e.target.result);
+};
+lector.readAsDataURL(archivo);
+}
 });
-
 </script>
 
 </body>
