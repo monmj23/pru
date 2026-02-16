@@ -4,32 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MusicStream</title>
-<link rel="stylesheet" href="CSS/main.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
     <h1>🎵 MusicStream</h1>
-    <input type="text" id="buscador" placeholder="Buscar canción...">
+    <nav>
+        <a href="perfil.html">Perfil</a>
+        <a href="html/tienda.html">Tienda</a>
+    </nav>
 </header>
+
+<section class="busqueda">
+    <input type="text" id="buscador" placeholder="Buscar canción o artista...">
+</section>
 
 <main class="contenedor">
 
     <!-- SOLAR FLARE -->
     <div class="tarjeta solar-flare">
         <div class="solar-imagenes">
-            <img src="Imagenes/solar1.jpg" class="img1">
-            <img src="Imagenes/solar2.jpg" class="img2">
-            <img src="Imagenes/solar3.jpg" class="img3">
+            <img src="imagenes/solar1.jpg" class="img1">
+            <img src="imagenes/solar2.jpg" class="img2">
+            <img src="imagenes/solar3.jpg" class="img3">
         </div>
         <h3>Solar Flare</h3>
         <a href="html/player.html">Escuchar</a>
     </div>
 
-    <!-- MILO J -->
+    <!-- MILO -->
     <div class="tarjeta">
-        <img src="Imagenes/milo.jpg">
+        <img src="imagenes/milo.jpg">
         <h3>Milo J - Tus Vueltas</h3>
         <a href="html/player.html">Escuchar</a>
     </div>
@@ -42,15 +49,13 @@ const tarjetas = document.querySelectorAll(".tarjeta");
 
 buscador.addEventListener("keyup", function() {
     let filtro = buscador.value.toLowerCase();
-
     tarjetas.forEach(tarjeta => {
-        let texto = tarjeta.textContent.toLowerCase();
-        tarjeta.style.display = texto.includes(filtro) ? "block" : "none";
+        tarjeta.style.display =
+        tarjeta.textContent.toLowerCase().includes(filtro)
+        ? "block" : "none";
     });
 });
 </script>
 
 </body>
 </html>
-
-
