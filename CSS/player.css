@@ -1,56 +1,38 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-    text-align: center;
-}
-
-header {
-    padding: 20px;
-}
-
-header a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-.reproductor {
-    padding: 40px;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+    font-family:Arial;
 }
 
 .vinilo {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #111 40%, #000 60%);
-    position: relative;
-    animation: girar 10s linear infinite;
+    width:300px;
+    height:300px;
+    margin:40px auto;
+    border-radius:50%;
+    background:radial-gradient(circle,#111 40%,#000 70%);
+    position:relative;
+    animation:girar 10s linear infinite;
 }
 
 .portada {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    overflow:hidden;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
 }
 
 .portada img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-audio {
-    width: 300px;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 @keyframes girar {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
 }
